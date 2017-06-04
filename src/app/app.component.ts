@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  isVisible = true;
+  numberOfClicks = 0;
+
+  clicks = [];
+
+  buttonClick() {
+    this.isVisible = !this.isVisible;
+    this.numberOfClicks++;
+    this.clicks.push(new Date());
+  }
+
 }
